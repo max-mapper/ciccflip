@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  twitter: MyString
+  party: MyString
+  state: MyString
+
+two:
+  name: MyString
+  twitter: MyString
+  party: MyString
+  state: MyString

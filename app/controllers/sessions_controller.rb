@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
   def create
     session[:access_token] = request.env['omniauth.auth']['credentials']['token']
     session[:access_secret] = request.env['omniauth.auth']['credentials']['secret']
-    redirect_to show_path, :notice => "Signed in with Twitter!"
+    redirect_to show_path
   end
 
   def show

@@ -4,6 +4,8 @@ gem 'rails', '3.1.0.rc1'
 gem 'haml'
 gem 'oa-oauth'
 gem 'twitter'
+gem 'httparty'
+gem 'json'
 
 platforms :jruby do
   gem 'jruby-openssl', '~> 0.7'

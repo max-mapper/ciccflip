@@ -4,24 +4,14 @@
     %link{:href => "i/favicon.ico", :rel => "SHORTCUT ICON"}/
     %title CongressTroller
     %link{:href => "inflow.css", :rel => "stylesheet", :type => "text/css"}/
+    %script{:src => "javascripts/jquery.js"}
+    %script{:src => "javascripts/jquery.infieldlabel.js"}
+    %script{:src => "javascripts/pizzaaaaa.js"}
   %body
-    - if flash[:notice]
-      %p{:id => "notice"}
-        = flash[:notice]
-    - if flash[:error]
-      %p{:id => "error"}
-        = flash[:error]
     #top
       %div{:dojotype => "rdw.Search"}
       %div{:dojotype => "rdw.Notify"}
       #logo
       %div{:dojotype => "rdw.Loading"}
     #notices
-      .notice.rdwExtMetrics
-        .header
-          .row
-            %span.title Welcome!
-        .message
-          .row
-            %span.content
-              = yield
+      = yield

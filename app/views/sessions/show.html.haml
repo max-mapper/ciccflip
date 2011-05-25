@@ -1,7 +1,18 @@
+#lookup
+  %form{"accept-charset" => "UTF-8", "class" => "login"}
+    %p.instructions
+      Enter your state code
+    %p.url_container
+      %label{:for => "state"} e.g. CA, TX, ME, MA
+      %input#state.long{:size => "40", :type => "text"}/
+    %p.submit
+      %a.large.primary.button{:href => "javascript:void(false)"}
+        %span.rightarrow.icon>
+        Lookup Senator
+  %img#spinner.hidden{:alt => "Ajax-loader", :src => "i/ajax-loader.gif"}/
+
 %h1
   = "Hello #{@user.name}"
-%h2
-  Profile
 %dl
   %dt
     ID
@@ -65,5 +76,8 @@
         = @user.status.text
       via
       = @user.status.source.html_safe
+= form_tag "/lookup", :method => 'get', :class => "location" do
+  = text_field_tag "location", @user.location
+  = submit_tag "Look UP!"
 = form_tag signout_path, :method => 'delete' do
   = submit_tag 'Sign out'
