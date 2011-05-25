@@ -242,11 +242,14 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   background-repeat: no-repeat;
 }
 
+.signIn {
+  margin: 20px 0px;
+}
+
 #logo {
   position: absolute;
   height: 15px;
   width: 77px;
-  background-image: url("i/x.png");
   background-repeat: no-repeat;
   background-position: 0px -282px;
   z-index: 101;
