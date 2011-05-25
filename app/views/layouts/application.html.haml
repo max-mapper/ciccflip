@@ -1,9 +1,9 @@
 !!! 5
 %html
   %head
-    %title
-      Sign in with Twitter
-    = csrf_meta_tags
+    %link{:href => "i/favicon.ico", :rel => "SHORTCUT ICON"}/
+    %title Raindrop Inflow
+    %link{:href => "inflow.css", :rel => "stylesheet", :type => "text/css"}/
   %body
     - if flash[:notice]
       %p{:id => "notice"}
@@ -11,4 +11,39 @@
     - if flash[:error]
       %p{:id => "error"}
         = flash[:error]
-    = yield
+    #top
+      %div{:dojotype => "rdw.Search"}
+      %button{:name => "rd:home", :onclick => "location='#rd:home'"}
+        .topIcon.homeButton inflow
+      %button.topButtons{:style => "display:none;"}
+        .topIcon.bulkIcon bulk
+      %button.topButtons{:style => "display:none;"}
+        .topIcon.editIcon edit
+      %button.topButtons{:onclick => "window.open('https://mail.google.com/mail/?extsrc=mailto');"}
+        .topIcon.composeIcon compose
+      %div{:dojotype => "rdw.Notify"}
+      #logo
+      %div{:dojotype => "rdw.Loading"}
+    #notices
+      .notice.rdwExtMetrics
+        .header
+          .row
+            %span.title Welcome!
+        .message
+          .row
+            %span.content
+              = yield
+
+    #content.hbox
+      #conversations.start{:dojotype => "rdw.Conversations"}
+      #widgets.start{:dojotype => "rdw.Widgets"}
+    #footer
+      %a{:href => "/raindrop/extender/index.html", :style => "color: #000;", :target => "_blank"} extend
+      |
+      %a{:href => "https://wiki.mozilla.org/Raindrop/MetricsInfo", :style => "color: #000;", :target => "_blank"} metrics
+      |
+      %span.raindropVersion
+        :javascript
+          document.write(raindropVersion);      |
+      %span#syncStatus (waiting for sync status...)
+      %pre#syncStatusDetails.hidden

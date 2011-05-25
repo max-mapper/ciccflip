@@ -1,0 +1,356 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is Raindrop.
+ *
+ * The Initial Developer of the Original Code is
+ * Mozilla Messaging, Inc..
+ * Portions created by the Initial Developer are Copyright (C) 2009
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ * */
+
+@import url("Message.css");
+
+.rdwConversation {
+  position: relative;
+  width: 620px;
+  margin: 10px 10px 20px 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  /*background-image: url("../i/rd_message_bg.png");
+  background-repeat: repeat-x;*/
+}
+
+.rdwConversation.active {
+  border: 1px solid #bbb;
+}
+
+/*### IMPERSONAL ###*/
+.rdwConversation > .newImpersonal {
+  padding: 10px;
+  position: absolute;
+  bottom: 25px;
+  left: 35px;
+  width: 260px;
+  height: 120px;
+  background-image: url("../i/rd_move_bg2.png");
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  z-index: 2;
+} 
+
+.rdwConversation > .newImpersonal > .impersonalOptions {
+  background-image: url("../i/rd_move_bg.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding: 0 0 0 50px;
+  margin: 12px 0 0 0;
+}
+
+.rdwConversation > .newImpersonal > .impersonalOptions h4 {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+/*### END IMPERSONAL ###*/
+
+.rdwConversation.read {
+  background-image: none;
+  background-color: #f4f4f4;
+}
+
+.rdwConversation.read .rdwAttachments {
+  display: none;
+}
+
+.rdwConversationFullConversation.read {
+  background-image: url("../i/rd_message_bg.png");
+  background-repeat: repeat-x;
+  opacity: 1;
+}
+
+.rdwConversation.read > .header > .subject {
+  /*opacity: 0.5;*/
+}
+
+.rdwConversationFullConversation.read > .header > .subject {
+  opacity: 1;
+}
+
+.rdwConversation.read > .messages .message > .header > .author {
+  /*opacity: 0.5;*/
+}
+
+.rdwConversationFullConversation.read > .messages .message > .header > .author {
+  opacity: 1;
+}
+
+.rdwConversation.read > .messages .message > .header > .allRecipients {
+  display: none;
+}
+
+.rdwConversationFullConversation.read > .messages .message > .header > .allRecipients {
+  display: block;
+}
+
+.rdwConversation.read > .messages .message > .content {
+  /*opacity: 0.5;*/
+  margin-right: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.rdwConversationFullConversation.read > .messages .message > .content {
+  opacity: 1;
+  margin-right: 0px;
+  white-space: normal;
+  overflow: visible;
+}
+
+.rdwExtTwitterConversation.read > .messages .message > .content {
+  white-space: normal;
+  overflow: auto;
+}
+
+.rdwConversation > .header {
+  padding: 5px 5px 0;
+  width: 100%;
+  min-height: 28px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.rdwConversation > .header > .convoType {
+  float: right;
+  margin: 4px 0 0 0;
+  font-family: Droid-serif, Georgia, Times, serif;
+  font-size: 10px;
+}
+
+.rdwConversation > .header > .type {
+  margin: 4px 0 0 0;
+  font-size: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+/*
+.rdwConversation > .header > .type.direct {
+  background-image: url("../i/rd_inflow_directmessage.png");
+  background-repeat: no-repeat;
+  background-position: left 4px;
+  padding: 0 0 0 21px;
+}
+
+.rdwConversation > .header > .type.group {
+  background-image: url("../i/rd_inflow_groupmessage.png");
+  background-repeat: no-repeat;
+  background-position: left 4px;
+  padding: 0 0 0 26px;
+}
+*/
+
+.rdwConversation > .header > .subject {
+  margin: 3px 0 0 0;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  color: #FF5959;
+  text-decoration: none;
+  outline: none;
+}
+
+.rdwConversation > .header > .subject:hover {
+  text-decoration: underline;
+}
+
+
+.rdwConversation > .messages {
+  padding: 5px 0px;
+  -moz-box-sizing: border-box;
+}
+
+.rdwConversation .quickReply {
+  margin: 5px;
+  width: 608px;
+}
+
+.dj_gecko .rdwConversation .quickReply {
+  height: 24px;
+}
+
+.rdwConversation .quickReply button.reply {
+  -moz-border-radius: 0px 2px 2px 0px;
+  -webkit-border-top-right-radius: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  -webkit-border-top-left-radius: 0px;
+  -webkit-border-bottom-left-radius: 0px;
+}
+
+.rdwConversation .quickReply button.actions {
+  margin-left: 5px;
+}
+
+.buttonActions {
+  background-image: url("../i/x.png");
+  background-repeat: no-repeat;
+  background-position: 0px -253px;
+  color: transparent;
+  display: block;
+  text-indent: -1000px;
+  width: 24px;
+}
+
+.rdwConversation .replyTextArea {
+  width: 100%;
+  height: 24px;
+  padding: 4px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  color: #333;
+  font-family: "droid-sans", helvetica, arial, sans;
+  font-size: 12px;
+  background-color: #fafafa;
+  border: 1px solid #e6e6e6;
+  border-right: none;
+}
+
+.rdwConversation .replyTextArea.placeholder {
+  color: #888;
+}
+
+.rdwConversation .replyTextArea:focus {
+  color: #333;
+  height: 60px;
+  border: 1px solid #ccc;
+  border-right: none;
+}
+
+.rdwConversation.group .replyTextArea,
+.rdwConversation.broadcast .replyTextArea {
+  display: none;
+}
+
+.rdwConversation > .actions {
+  margin: 5px;
+  font-family: droid-serif, georgia, times, serif;
+  font-style: italic;
+  font-size: 10px;
+  width: 608px;
+  visibility: visible;
+}
+
+
+.rdwConversationActionCard {
+    position: absolute;
+    z-index: 500;
+    list-style: none;
+
+}
+
+.rdwConversationActionCard {
+    font-style: normal;
+    color: #333;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border: none;
+    font-size: 10px;
+    text-decoration: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc;
+}
+
+.rdwConversationActionCard li {
+    padding: 2px 4px;
+    background-image: url("i/rd_button_bg.png");
+    background-position: bottom;
+    background-repeat: repeat-x;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.rdwConversationActionCard li:hover {
+}
+
+.rdwConversationActionCard li:active {
+    background-color: #e6e6e6;
+    background-image: none;
+}
+
+
+
+
+/*### twitter actions ###*/
+.rdwConversation.rdwExtTwitterConversation > .actions {
+  position: absolute;
+  top: 0;
+  right: 0;
+  float: right;
+  width: auto;
+}
+
+/*### end twitter actions ###*/
+
+.rdwConversationFullMessage > .message > .actions button,
+.leftActions button,
+.rdwAttachments .attachAction button {
+  display: inline;
+  float: left;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+}
+
+.rdwConversationFullMessage > .message > .actions button {
+  position: relative;
+  left: 522px;
+}
+
+.rdwConversationFullMessage > .message > .actions button:first-child,
+.leftActions button:first-child, 
+.rdwAttachments .attachAction button:first-child {
+  -moz-border-radius-bottomleft: 2px;
+  -moz-border-radius-topleft: 2px;
+  -webkit-border-bottom-left-radius: 2px;
+  -webkit-border-top-left-radius: 2px;
+}
+
+.rdwConversationFullMessage > .message > .actions button:last-child,
+.leftActions button:last-child,
+.rdwAttachments .attachAction button:last-child {
+  -moz-border-radius-bottomright: 2px;
+  -moz-border-radius-topright: 2px;
+  -webkit-border-bottom-right-radius: 2px;
+  -webkit-border-top-right-radius: 2px;
+}
+
+/*### Twitter reply ###*/
+
+.rdwExtTwitterConversation .rdwExtTwitterCompose .twitterIcon {
+  display: none;
+}
+
+.rdwExtTwitterConversation .rdwExtTwitterCompose .twitterForm {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  background: none;
+  border: none;
+  padding: 5px;
+}

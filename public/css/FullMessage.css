@@ -1,0 +1,161 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is Raindrop.
+ *
+ * The Initial Developer of the Original Code is
+ * Mozilla Messaging, Inc..
+ * Portions created by the Initial Developer are Copyright (C) 2009
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ * */
+
+.rdwConversationFullMessage {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #e6e6e6;
+  background-color: #fff;
+  margin: 0 0 20px 0;
+}
+
+.rdwConversationFullMessage > .message {
+  padding: 1px 0px 5px 0px;
+  margin: 0;
+}
+
+.rdwConversationFullMessage > .message > .header {
+  display: table;
+  width: 100%;
+  margin: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.rdwConversationFullMessage > .message > .header > .author {
+  display: inline-block;
+  margin: 0 0 8px 0;
+}
+
+.rdwConversationFullMessage > .message > .header > .author > .from {
+  display: table;
+  font-size: 14px;
+  color: #1a1a1a;
+  margin: 3px 0 0 0;
+}
+
+.rdwConversationFullMessage > .message > .header > .author > .medium {
+  color: #888;
+}
+
+.rdwConversationFullMessage > .message > .header > .published {
+  display: table;
+  float: right;
+  font-style: normal;
+  font-size: 10px;
+  margin-top: 4px;
+}
+
+.rdwConversationFullMessage > .message > .header > .published > .value:not(:empty):before {
+  content: "";
+  display: none;
+}
+
+.rdwConversationFullMessage > .message > .header > .published > .friendly {
+  display: inline;
+  color: #000;
+}
+
+.rdwConversationFullMessage > .message > .header > .published > .additional {
+  display: inline;
+  color: #000;
+}
+
+.rdwConversationFullMessage > .message > .content {
+  margin: 0;
+}
+
+.rdwConversationFullMessage > .message > .content > a.quoteToggle,
+.rdwConversationFullMessage > .message > .content > .quote {
+  display: table;
+  margin-bottom: 8px;
+}
+
+.rdwConversationFullMessage > .message > .content > .quote {
+  color: #888;
+}
+
+.rdwConversationFullMessage > .message > .actions {
+  display: inline-block;
+  text-align: right;
+  width: 100%;  
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  padding: 0 5px;
+}
+
+.rdwConversationFullMessage > .message > .actions a.reply {
+  margin-left: 4px;
+}
+  
+
+
+.toolBox {
+  font-size: x-small;
+  text-align: right;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.toolBox a {
+  color: #1a1a1a;
+  height: 16px;
+  padding: 0 0 0 20px;
+  margin: 8px 0 0 10px;
+  line-height: 16px;
+  font-family: Droid-serif, Georgia, times, serif;
+  font-style: italic;
+  text-decoration: none;
+}
+
+.toolBox a:hover {
+  text-decoration: underline;
+}
+
+.toolBox .archive {
+  background-image: url("../i/archive.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  height: 16px;
+  display: inline-block;
+}
+
+.toolBox .spam {
+  background-image: url("../i/spam.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  height: 16px;
+  display: inline-block;
+}
+
+.toolBox .delete {
+  background-image: url("../i/delete.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  height: 16px;
+  display: inline-block;
+}

@@ -1,0 +1,311 @@
+/* ***** BEGIN LICENSE BLOCK *****
+ * Version: MPL 1.1
+ *
+ * The contents of this file are subject to the Mozilla Public License Version
+ * 1.1 (the "License"); you may not use this file except in compliance with
+ * the License. You may obtain a copy of the License at
+ * http://www.mozilla.org/MPL/
+ *
+ * Software distributed under the License is distributed on an "AS IS" basis,
+ * WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ * for the specific language governing rights and limitations under the
+ * License.
+ *
+ * The Original Code is Raindrop.
+ *
+ * The Initial Developer of the Original Code is
+ * Mozilla Messaging, Inc..
+ * Portions created by the Initial Developer are Copyright (C) 2009
+ * the Initial Developer. All Rights Reserved.
+ *
+ * Contributor(s):
+ * */
+
+/* CSS for the various default Widgets we display */
+
+.rdwWidgets .rdwAttachments {
+  display: none;
+}
+
+.WidgetBox,
+.rdwWidgets.start .rdwConversation {
+  width: 310px;
+  margin: 10px 0;
+  padding: 5px 2px 0 6px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: -30px;
+  padding-top: 25px;
+}
+
+.WidgetBox > .WidgetHeader > .title {
+  font-weight: bold;
+}
+
+.WidgetBox .rdwMessage {
+  padding-bottom: 1px;
+}
+
+.WidgetBox .rdwMessage > .message > .header > .subject {
+  margin: 6px 0 0 0;
+  font-size: 12px;
+  color: #ff5959;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.WidgetBox .rdwMessage > .message > .header > .subject:hover {
+  text-decoration: underline;
+}
+
+.WidgetBox .rdwMessage > .message > .header > .published {
+  font-size: 10px;
+  color: #888;
+}
+
+.WidgetBox .wipeToggle {
+  cursor: pointer;
+  width: 24px;
+  font-size: 12px;
+}
+
+.WidgetBox > .WidgetHeader {
+  width: 100%;
+  line-height: 18px;
+}
+
+.dj_gecko .WidgetBox > .WidgetHeader {
+  line-height: 16px;
+}
+
+.WidgetBox > .WidgetHeader > .title {
+  padding: 0 0 0 22px;
+  background-repeat: no-repeat;
+  background-position: left;
+  color: inherit;
+  text-decoration: none;
+  outline: none;
+}
+
+.WidgetBox > .WidgetHeader > .title:hover {
+  text-decoration: underline;
+}
+
+.WidgetBox > .WidgetHeader > .actions {
+  text-align: right;
+}
+
+.WidgetBox > .WidgetHeader > .actions > .action:empty {
+  display: none;
+}
+
+.WidgetBox > .WidgetHeader > .actions > .action {
+  padding: 2px 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.WidgetBox > .WidgetHeader > .actions > .noteCount,
+.WidgetBox > .WidgetHeader > .actions > .broadcastCount {
+  background-color: #ff5959;
+}
+
+.WidgetBox > .WidgetHeader > .actions > .noteCount {
+  background-image: url("../i/rd_notification_icon.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 24px;
+  display: none;
+}
+
+.WidgetBox > .WidgetHeader > .actions > .broadcastCount {
+  background-image: url("../i/rd_broadcast_icon.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  padding-right: 25px;
+  display: none;
+}
+
+.WidgetBox .attachments {
+  display: none;
+}
+
+/* ### SUMMARY ### */
+
+.rdwSummaryGroup {
+  padding: 23px 0 0 2px;
+  margin: 0 0 5px 0;
+  -moz-border-image: url("../i/rd_summary_border_thin.png") 2 10 17 8;
+  -webkit-border-image: url("../i/rd_summary_border_thin.png") 2 10 17 8;
+  border-width: 2px 10px 17px 8px;  
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  background-image: none;
+}
+
+/* ### ACCOUNT GROUPS ### */
+
+.rdwExtAccountGroup {
+  -moz-border-image: url("../i/rd_widget_border_blue_thin.png") 1 8 12 4;
+  -webkit-border-image: url("../i/rd_widget_border_blue_thin.png") 1 8 12 4;
+  border-width: 1px 8px 12px 4px; 
+}
+
+.rdwExtAccountGroup .rdwMessage > .message > .content a {
+  color: #ff5959;
+  text-decoration: none;
+}
+
+.rdwExtAccountGroup .rdwMessage > .message > .content a:hover {
+  text-decoration: underline;
+}
+
+
+/* ### TWITTER ### */
+
+.rdwGenericGroup.rdwExtTwitterGroup {
+  -moz-border-image: url("../i/rd_widget_border_blue_thin.png") 1 8 12 4;
+  -webkit-border-image: url("../i/rd_widget_border_blue_thin.png") 1 8 12 4;
+  border-width: 1px 8px 12px 4px;
+}
+
+.rdwGenericGroup.rdwExtTwitterGroup > .WidgetHeader > .title {
+  background-image: url("../i/x.png");
+  background-repeat: no-repeat;
+  background-position: 0px -85px;
+  padding: 0 0 0 22px;
+}
+
+
+/* ### FACEBOOK ### */
+
+.rdwExtFacebookGroup > .WidgetHeader > .title {
+  padding: 0 0 0 17px;
+  background-image: url("../i/x.png");
+  background-repeat: no-repeat;
+  background-position: 0px -23px;
+}
+
+
+/* ### MAILING LIST ### */
+
+.rdwGenericGroup.rdwConversationMailingList {
+  -moz-border-image: url("../i/rd_widget_border_pink_thin.png") 1 8 12 4;
+  -webkit-border-image: url("../i/rd_widget_border_pink_thin.png") 1 8 12 4;
+  border-width: 1px 8px 12px 4px; 
+}
+
+.rdwGenericGroup.rdwConversationMailingList > .WidgetHeader > .title {
+  padding: 0 0 0 18px;
+  background-image: url("../i/x.png");
+  background-repeat: no-repeat;
+  background-position: 0px -43px;
+}
+
+/* ### RSS ### */
+
+.rdwGroupRss.rdwGenericGroup {
+  -moz-border-image: url("../i/rd_widget_border_orange_thin.png") 1 8 12 4;
+  -webkit-border-image: url("../i/rd_widget_border_orange_thin.png") 1 8 12 4;
+  border-width: 1px 8px 12px 4px; 
+} 
+
+.rdwGroupRss.rdwGenericGroup > .WidgetHeader > .title {
+  padding: 0 0 0 17px;
+  background-image: url("../i/x.png");
+  background-repeat: no-repeat;
+  background-position: 0px -65px;
+  min-height: 16px;
+  display: block;
+}
+
+/* ### GENERIC GROUP ### */
+
+.rdwGenericGroup {
+  -moz-border-image: url("../i/rd_widget_border_green_thin.png") 1 8 12 4;
+  -webkit-border-image: url("../i/rd_widget_border_green_thin.png") 1 8 12 4;
+  border-width: 1px 8px 12px 4px; 
+}
+
+.rdwGenericGroup > .WidgetHeader > .title {
+  padding: 0 0 0 18px;
+  background-image: url("../i/x.png");
+  background-repeat: no-repeat;
+  background-position: 0px -1px;
+}
+
+/* ### BROADCASTS ### */
+
+.rdwWidgets.start .rdwConversation {
+  background-color: #ffdede;
+}
+
+.rdwWidgets.start .rdwConversation > .messages {
+  padding: 0;
+  width: 100%;
+}
+
+.rdwWidgets.start .rdwConversation > .actions {
+  display: none;
+}
+
+.rdwWidgets.start .rdwConversation > .header {
+  padding: 0;
+}
+
+.rdwWidgets.start .rdwConversation > .header > .type {
+  float: none;
+  margin: 0;
+  padding: 0 0 0 18px;
+  background-image: url("../i/rd_widget_broadcast.png");
+  background-repeat: no-repeat;
+  background-position: left 3px;
+}
+
+.rdwWidgets.start .rdwConversation > .header > .subject {
+  font-size: 12px;
+  margin: 6px 0 0 0;
+}
+
+.rdwWidgets.start .rdwConversation > .header > .subject:hover {
+  text-decoration: underline;
+}
+
+.rdwWidgets.start .rdwMessage > .message > .header {
+  margin: 4px 0 0 0;
+  padding: 4px 0 0 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.rdwWidgets.start .rdwMessage > .message > .content {
+  padding: 0;
+}
+
+.rdwWidgets.start .rdwMessage > .message > .from {
+    font-weight: bold;
+}
+
+.rdwWidgets.start .rdwMessage > .message > .unreadCount {
+  font-weight: bold;
+}
+
+.rdwWidgets.start .rdwMessage > .message > .unreadCount:empty {
+  display: none;
+}
+
+.rdwWidgets.start .rdwMessage > .message > .unreadCount:after {
+  content: " - ";
+}
+
+.rdwWidgets.start .rdwMessage > .message > .unreadCount:empty:after {
+  content: "";
+}
+
+.inflowSelected .WidgetHeader > .title {
+  opacity: 0.5;
+}
