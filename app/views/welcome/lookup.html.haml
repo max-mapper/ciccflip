@@ -1,0 +1,16 @@
+.notice.rdwExtMetrics
+  .header
+    .row
+      %span.title Here is what I found!
+  .message
+    - if @senators.length == 0
+      .row
+        %span.content
+          %strong Too BAD
+          We didn't find any of your senators on Twitter
+
+    - @senators.each do |s|
+      .row
+        %span.content
+          %strong YOoooo
+          = s.inspect

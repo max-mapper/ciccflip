@@ -3,6 +3,6 @@ Ciccflip::Application.routes.draw do
   get '/auth/twitter/callback', :to => 'sessions#create', :as => 'callback'
   get '/auth/failure', :to => 'sessions#error', :as => 'failure'
   get '/profile', :to => 'sessions#show', :as => 'show'
-  get '/location', :to => 'welcome#location', :as => 'location'
+  get '/lookup', :to => 'welcome#lookup', :as => 'lookup'
   delete '/signout', :to => 'sessions#destroy', :as => 'signout'
 end
