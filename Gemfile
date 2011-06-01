@@ -6,6 +6,7 @@ gem 'oa-oauth'
 gem 'twitter'
 gem 'httparty'
 gem 'json'
+gem 'sqlite3-ruby'
 
 platforms :jruby do
   gem 'jruby-openssl', '~> 0.7'
